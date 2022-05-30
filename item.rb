@@ -1,6 +1,5 @@
 class Item
-
-attr_accessor :genre, :author, :source, :label, :publish_date
+  attr_accessor :genre, :author, :source, :label, :publish_date
 
   def initialize(date, archived: false)
     @id = rand(1..1000)
@@ -13,6 +12,6 @@ attr_accessor :genre, :author, :source, :label, :publish_date
   end
 
   def move_to_archive
-    @archived = true if self.can_be_archived?
+    @archived = true if can_be_archived?
   end
 end
