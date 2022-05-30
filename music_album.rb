@@ -1,14 +1,15 @@
 require './item'
 
-attr_accessor :on_spotify
-
 class MusicAlbum < Item
-  def initialize(on_spotify: false)
-    super()
+
+  attr_accessor :on_spotify
+
+  def initialize( date, on_spotify: false)
+    super(date)
     @on_spotify = on_spotify
   end
 
-  def can_be_archieved?(item)
-    item.can_be_archieved? && on_spotify = true
+  def can_be_archived?
+    super && on_spotify = true
   end
 end
