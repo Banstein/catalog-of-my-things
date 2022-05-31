@@ -1,4 +1,6 @@
-require './genre'
+require_relative './genre'
+require_relative './music_album'
+require_relative './file_manager'
 
 class App
 
@@ -18,6 +20,13 @@ class App
       end
       save_file("./data/#{file_name}.json", file) if var.size.positive?
     end 
+  end
+   
+   def recover_files
+    genre_file = get_file('./data/genre_list.json')
+    music_album_file = get_file('./data/music_album_list.json')
+    recover_genre(book_file)
+    recover_music_list(people_file)
   end
 
    def to_hash(object)
