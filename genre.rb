@@ -9,8 +9,8 @@ class Genre
     @items = []
   end
 
-  def add_item(music_genre)
-    items << music_genre
-    music_genre.genre = self
+  def add_item(item)
+    items << item
+    item.genre = self
   end
 end
