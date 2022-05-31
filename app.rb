@@ -20,6 +20,14 @@ class App
     end 
   end
 
+   def to_hash(object)
+    hash = {}
+    object.instance_variables.each do |var|
+      hash[var.to_s.delete('@')] = object.instance_variable_get(var)
+    end
+    hash
+  end
+
   def add_genre(name)
     genre = Genre.new(name)
     genre_list.push(genre)
