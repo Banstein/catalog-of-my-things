@@ -1,4 +1,4 @@
-require_relative 'item.rb'
+require_relative 'item'
 
 class Book < Item
   def initialize(publisher, cover_stat)
@@ -8,6 +8,6 @@ class Book < Item
   end
 
   def can_be_archived?
-    super || @cover_stat == "bad"
+    super || @cover_stat == 'bad'
   end
 end

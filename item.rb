@@ -34,6 +34,3 @@ class Item
     @archived = true if can_be_archived?
   end
 end
-
-gens = Item.new(25/8/2011)
-p gens
