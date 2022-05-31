@@ -9,8 +9,8 @@ class Author
     @items = []
   end
 
-  def add_item (item)
-    @items.push(item)
+  def add_item(item)
+    @items << item
     item.author = self
   end
 end

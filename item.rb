@@ -1,12 +1,11 @@
 class Item
-  attr_accessor :genre, :source, :label, :publish_date, :archived
-  attr_reader :id :author
+  attr_accessor :genre, :author, :source, :label, :publish_date, :archived
+  attr_reader :id
 
   def initialize(date, archived: false)
     @id = rand(1...1000)
     @publish_date = date
     @archived = archived
-
     @genre = []
     @source = []
     @label = []
@@ -22,7 +21,7 @@ class Item
 
   def add_author(author)
     @author = author
-    author.items.push(self) unless author.items.include?(self)
+    author.add_item(self) unless author.items.include? self
   end
 
   def add_label(label)
