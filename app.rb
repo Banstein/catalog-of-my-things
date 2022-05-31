@@ -20,6 +20,10 @@ class App
   end
 
   def display_genre
-    @genre_list.each { |genre| puts "Name: \"#{book.title}\"}" }
+    @genre_list.each { |genre| puts "Name: #{genre.name}" }
+  end
+
+  def display_music_album
+    @music_album_list.each { |music_genre| puts "Date: #{music_genre.date}, On Spotify: #{music_genre.date}" }
   end
 end

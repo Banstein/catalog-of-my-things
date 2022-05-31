@@ -8,6 +8,16 @@ def take_action
   decision = gets.chomp
   puts 'Please choose one of the options on the list' unless '123456789'.include?(decision)
   decision == '9' && exit_program
+  methods = [method(:display_books), method(:display_music_album), method(:display_genre), method(:add_genre), method(:display_labels) method(:add_music_album), method(:add_genre), method(:add_label)]
+  '12345678'.include?(decision) && methods[decision.to_i - 1].call(app)
+end
+
+def display_genre(app)
+  app.display_genre
+end
+
+def display_music_album(app)
+  app.display_music_album
 end
 
 def exit_program
