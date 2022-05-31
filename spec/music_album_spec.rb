@@ -3,7 +3,7 @@ require './item'
 
 describe MusicAlbum do
   before :each do
-    @music_album = MusicAlbum.new('22-02-2022')
+    @music_album = MusicAlbum.new('22-02-2022', true)
   end
 
    context '#new' do
