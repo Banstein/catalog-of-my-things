@@ -26,7 +26,7 @@ class Item
   end
 
   def can_be_archived?
-    converted = Date::strptime(@publish_date, "%d-%m-%Y")
+    converted = Date.strptime(@publish_date, '%d-%m-%Y')
     (Time.now.year - converted.year) > 10
   end
 
@@ -34,3 +34,6 @@ class Item
     @archived = true if can_be_archived?
   end
 end
+
+gens = Item.new(25/8/2011)
+p gens
