@@ -13,4 +13,13 @@ class App
     genre = Genre.new(name)
     genre_list.push(genre)
   end
+
+  def add_music_album(date)
+    music_album = MusicAlbum.new(date)
+    music_album_list.push(music_album)
+  end
+
+  def display_genre
+    @genre_list.each { |genre| puts "Name: \"#{book.title}\"}" }
+  end
 end
