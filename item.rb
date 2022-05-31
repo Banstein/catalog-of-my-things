@@ -9,7 +9,6 @@ class Item
     @publish_date = date
     @archived = archived
 
-    @source = []
     @label = []
   end
 
@@ -19,7 +18,6 @@ class Item
   end
 
   def add_author(author)
-    @author << author
     @author = author
     author.add_item(self) unless author.items.include? self
   end
