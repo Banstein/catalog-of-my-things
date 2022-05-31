@@ -8,7 +8,6 @@ class Item
     @id = rand(1...1000)
     @publish_date = date
     @archived = archived
-
     @label = []
   end
 
@@ -27,7 +26,7 @@ class Item
   end
 
   def can_be_archived?
-    converted = Date::strptime(@publish_date, "%d-%m-%Y")
+    converted = Date.strptime(@publish_date, '%d-%m-%Y')
     (Time.now.year - converted.year) > 10
   end
 

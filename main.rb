@@ -3,7 +3,11 @@ require './app'
 def display_app
   puts "\nPlease choose an option by entering a number:"
   puts ['1 - List all books', '2 - List all music album', '3 - List all genre', '4 - List all labels', '5 - Add a book',
+<<<<<<< HEAD
         '6 - Add a music album', '7 - Add genre', '8 - Add label', '9 - Exit']
+=======
+        '6 - Add a music album', '7 - Add genre', '8 - Add label', '9 - List all movies', '10 - List all Sources', '11 - Add a movie', '12 - Exit']
+>>>>>>> 96c3afee59395cec939b58db50374a3cf40d8e94
 end
 
 def take_action(app)
