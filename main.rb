@@ -20,6 +20,30 @@ def display_music_album(app)
   app.display_music_album
 end
 
+def add_genre(app)
+  print "\nName of Genre: "
+  name = gets.chomp
+  app.add_genre(name)
+  puts 'Genre added successfully'
+end
+
+def on_spotify?(spotify_value)
+  on_spotify = false
+  spotify = spotify_value.capitalize
+  on_spotify = true if permission.include?('Y')
+  on_spotify
+end
+
+def add_music_album(app)
+  print "\nEnter music album date in day-month-year format: "
+  date = gets.chomp
+  print "\nOn spotify? [y/n]: "
+  spotify_value = gets.chomp
+  spotify = on_spotify?(spotify_value)
+  app.add_music_album(date, spotify)
+  puts 'Music album added successfully'
+end
+
 def exit_program
   puts 'Thank you for using this app!'
   exit
