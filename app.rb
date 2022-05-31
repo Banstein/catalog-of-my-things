@@ -62,12 +62,13 @@ class App
       add_genre(name)
     end
 
-      def recover_books(hash)
-    hash.each do |book|
-      current_book = book['value']
-      title = current_book['title']
-      author = current_book['author']
-      add_book(title, author)
+    def recover_books(hash)
+    hash.each do |music_album|
+      current_album = music_album['value']
+      date = current_album['date']
+      archived = current_album['archived']
+      on_spotify = current_album['on_spotify']
+      add_book( date, archived, on_spotify)
     end
   end
   end
