@@ -14,8 +14,8 @@ class App
     genre_list.push(genre)
   end
 
-  def add_music_album(date)
-    music_album = MusicAlbum.new(date)
+  def add_music_album(date, spotify)
+    music_album = MusicAlbum.new(date, spotify)
     music_album_list.push(music_album)
   end
 
