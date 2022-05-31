@@ -25,8 +25,8 @@ class App
    def recover_files
     genre_file = get_file('./data/genre_list.json')
     music_album_file = get_file('./data/music_album_list.json')
-    recover_genre(book_file)
-    recover_music_list(people_file)
+    recover_genre(genre_file)
+    recover_music_list(music_album_file)
   end
 
    def to_hash(object)
@@ -53,5 +53,22 @@ class App
 
   def display_music_album
     @music_album_list.each { |music_genre| puts "Date: #{music_genre.date}, On Spotify: #{music_genre.date}" }
+  end
+
+    def recover_genre(hash)
+    hash.each do |genre|
+      current_genre = genre['value']
+      name = current_genre['name']
+      add_genre(name)
+    end
+
+      def recover_books(hash)
+    hash.each do |book|
+      current_book = book['value']
+      title = current_book['title']
+      author = current_book['author']
+      add_book(title, author)
+    end
+  end
   end
 end
