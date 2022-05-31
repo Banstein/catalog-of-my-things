@@ -1,5 +1,4 @@
 require './author.rb'
-require '.game.rb'
 
 describe Author do
   context "Test add_item method" do
