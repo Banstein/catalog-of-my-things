@@ -1,6 +1,6 @@
 class Item
-  attr_accessor :genre, :author, :source, :label, :publish_date
-  attr_reader :id, :archived
+  attr_accessor :genre, :author, :source, :label, :publish_date, :archived
+  attr_reader :id
 
   def initialize(date, archived: false)
     @id = rand(1...1000)
@@ -30,7 +30,8 @@ class Item
   end
 
   def can_be_archived?
-    (Time.now.year - @publish_date.year) > 10
+    converted = Date::strptime(@publish_date, "%d-%m-%Y")
+    (Time.now.year - converted.year) > 10
   end
 
   def move_to_archive
