@@ -9,6 +9,17 @@ class App
     @music_album_list = []
   end
 
+  def save_files
+    instance_variables.each do |var|
+      file = []
+      file_name = var.to_s.delete('@')
+      instance_variable_get(var).each do |obj|
+        file.push({ ref: obj, value: to_hash(obj) })
+      end
+      save_file("./data/#{file_name}.json", file) if var.size.positive?
+    end 
+  end
+
   def add_genre(name)
     genre = Genre.new(name)
     genre_list.push(genre)
