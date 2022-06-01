@@ -32,17 +32,17 @@ describe Book do
 
   describe '#can_be_archived?' do
     it 'Test if it can return true if book can be archived' do
-      book = Book.new('bahnas', 'good','12-12-2010')
+      book = Book.new('bahnas', 'good', '12-12-2010')
       expect(book.can_be_archived?).to be(true)
     end
 
     it 'Test if it can return false if book cannot be archived' do
-      book = Book.new('bahnas', 'good','12-12-2019')
+      book = Book.new('bahnas', 'good', '12-12-2019')
       expect(book.can_be_archived?).to be(false)
     end
 
     it 'Test if it can return false if book can be archived' do
-      book = Book.new('bahnas', 'bad','12-12-2019')
+      book = Book.new('bahnas', 'bad', '12-12-2019')
       expect(book.can_be_archived?).to be(true)
     end
   end
