@@ -73,7 +73,7 @@ class App
   end
 
   def display_games
-    @game.each {|game| puts "Date: #{game.date}, last played at #{game.last_played_at}" }
+    @game.each {|game| puts "Date: #{game.publish_date}, last played at #{game.last_played_at}" }
   end  
 
   def recover_genre(hash)
@@ -84,7 +84,7 @@ class App
     end
   end
 
-  def recover_books(hash)
+  def recover_music_list(hash)
     hash.each do |music_album|
       current_album = music_album['value']
       date = current_album['date']
@@ -113,5 +113,4 @@ class App
       add_author(first_name, last_name)
     end
   end
-
 end
