@@ -44,11 +44,11 @@ class App
     hash
   end
 
-  def add_author(first_name , last_name)
+  def add_author(_first_name, _last_name)
     author = Author.new(date, archived)
     authors.push(author)
   end
-  
+
   def add_game(date, archived, multiplayer, last_played_at)
     new_game = Game.new(date, archived, multiplayer, last_played_at)
     game.push(new_game)
@@ -73,8 +73,8 @@ class App
   end
 
   def display_games
-    @game.each {|game| puts "Date: #{game.publish_date}, last played at #{game.last_played_at}" }
-  end  
+    @game.each { |game| puts "Date: #{game.publish_date}, last played at #{game.last_played_at}" }
+  end
 
   def recover_genre(hash)
     hash.each do |genre|
@@ -100,7 +100,7 @@ class App
       date = current_game['date']
       archived = current_game['archived']
       multiplayer = current_game['multiplayer']
-      last_played_at= current_game['last_played_at']
+      last_played_at = current_game['last_played_at']
       add_game(date, archived, multiplayer, last_played_at)
     end
   end
