@@ -1,17 +1,20 @@
+require 'date'
+
 class Item
-  attr_accessor :genre, :author, :source, :publish_date, :archived
-  attr_reader :id, :label
+
+  attr_accessor :source, :publish_date, :archived, :author
+  attr_reader :id, :genre, :label
+
 
   def initialize(date, archived: false)
     @id = rand(1...1000)
     @publish_date = date
     @archived = archived
-    @genre = []
-    @source = []
   end
 
   def add_genre(genre)
-    @genre << genre
+    @genre = genre
+    genre.add_item(self) unless genre.items.include? self
   end
 
   def add_author(author)
