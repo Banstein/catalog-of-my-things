@@ -6,10 +6,8 @@ class Item
     @id = rand(1...1000)
     @publish_date = date
     @archived = archived
-
     @genre = []
     @source = []
-    @author = []
     @label = []
   end
 
@@ -22,7 +20,8 @@ class Item
   end
 
   def add_author(author)
-    @author << author
+    @author = author
+    author.add_item(self) unless author.items.include? self
   end
 
   def add_label(label)
@@ -30,7 +29,7 @@ class Item
   end
 
   def can_be_archived?
-    converted = Date::strptime(@publish_date, "%d-%m-%Y")
+    converted = Date.strptime(@publish_date, '%d-%m-%Y')
     (Time.now.year - converted.year) > 10
   end
 
