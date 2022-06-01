@@ -25,8 +25,10 @@ class App
   def recover_files
     genre_file = get_file('./data/genre_list.json')
     music_album_file = get_file('./data/music_album_list.json')
+    game_file =('./data/game.json')
     recover_genre(genre_file)
     recover_music_list(music_album_file)
+    recover_game(game_file)
   end
 
   def to_hash(object)
@@ -75,6 +77,17 @@ class App
       archived = current_album['archived']
       on_spotify = current_album['on_spotify']
       add_book(date, archived, on_spotify)
+    end
+  end
+
+  def recover_game(hash)
+    hash.each do |game|
+      current_game = game['value']
+      date = current_game['date']
+      archived = current_game['archived']
+      multiplayer = current_game['multiplayer']
+      last_played_at= current_game['last_played_at']
+      add_game(date, archived, multiplayer, last_played_at)
     end
   end
 end
