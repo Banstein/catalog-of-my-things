@@ -1,7 +1,7 @@
 def display_app
   puts "\nPlease choose an option by entering a number:"
-  puts ['1 - List all books', '2 - List all music album' '3 - List all genre' '4 - List all labels', '5 - Add a book',
-        '6 - Add a music album', '7 - Add genre', '8 - Add label', '9 - Exit']
+  puts ['1 - List all books', '2 - List all music album', '3 - List all genre', '4 - List all labels', '5 - Add a book',
+        '6 - Add a music album', '7 - Add genre', '8 - Add label', '9 - List all movies', '10 - List all Sources', '11 - Add a movie', '12 - Exit']
 end
 
 def take_action

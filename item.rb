@@ -6,7 +6,6 @@ class Item
     @id = rand(1...1000)
     @publish_date = date
     @archived = archived
-
     @genre = []
     @source = []
     @author = []
@@ -17,7 +16,8 @@ class Item
   end
 
   def add_author(author)
-    @author << author
+    @author = author
+    author.add_item(self) unless author.items.include? self
   end
 
   def label=(label)
