@@ -13,9 +13,9 @@ def take_action(app)
   puts 'Please choose one of the options on the list' unless '123456789"10""11""12"'.include?(decision)
   decision == '12' && exit_program
   methods = [method(:display_books), method(:display_music_album), method(:display_genre),
-             method(:display_labels), method(:display_movies), method(:display_sources),
+             method(:display_labels), method(:display_games), method(:display_sources), method(:display_authors),
              method(:add_genre), method(:add_label), method(:add_book),
-             method(:add_music_album), method(:add_movie)]
+             method(:add_music_album), method(:add_game)]
   '12345678'.include?(decision) && methods[decision.to_i - 1].call(app)
 end
 
