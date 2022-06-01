@@ -28,10 +28,12 @@ class App
   def recover_files
     genre_file = get_file('./data/genre_list.json')
     music_album_file = get_file('./data/music_album_list.json')
-    game_file =('./data/game.json')
+    game_file = get_file('./data/game.json')
+    author_file = get_file('./data/author.json')
     recover_genre(genre_file)
     recover_music_list(music_album_file)
     recover_game(game_file)
+    recover_author(author_file)
   end
 
   def to_hash(object)
@@ -42,7 +44,7 @@ class App
     hash
   end
 
-  def add_author(date , archived)
+  def add_author(first_name , last_name)
     author = Author.new(date, archived)
     authors.push(author)
   end
@@ -102,4 +104,14 @@ class App
       add_game(date, archived, multiplayer, last_played_at)
     end
   end
+
+  def recover_author(hash)
+    hash.each do |author|
+      current_author = author['value']
+      first_name = current_author['first_name']
+      last_name = current_author['last_name']
+      add_author(first_name, last_name)
+    end
+  end
+
 end
