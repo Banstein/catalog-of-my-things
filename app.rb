@@ -1,14 +1,17 @@
 require_relative './genre'
 require_relative './music_album'
 require_relative './file_manager'
+require_relative './game'
+require_relative './author'
 
 class App
-  attr_reader :genre_list, :music_album_list, :game
+  attr_reader :genre_list, :music_album_list, :game, :author
 
   def initialize
     @genre_list = []
     @music_album_list = []
     @game = []
+    @authors = []
   end
 
   def save_files
@@ -37,6 +40,11 @@ class App
       hash[var.to_s.delete('@')] = object.instance_variable_get(var)
     end
     hash
+  end
+
+  def add_author(date , archived)
+    author = Author.new(date, archived)
+    authors.push(author)
   end
   
   def add_game(date, archived, multiplayer, last_played_at)
