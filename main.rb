@@ -3,9 +3,9 @@ require './app'
 def display_app
   puts "\nPlease choose an option by entering a number:"
   puts ['1 - List all books', '2 - List all music album', '3 - List all genre',
-        '4 - List all labels', '5 - List all movies', '6 - List all Sources',
-        '7 - Add genre', '8 - Add label', '9 - Add a book',
-        '10 - Add a music album', '11 - Add a movie', '12 - Exit']
+        '4 - List all labels', '5 - List all games', '6 - List all Sources', '7 - List all authors'
+        '8 - Add genre', '9 - Add label', '10 - Add a book',
+        '11 - Add a music album', '12 - Add a game', '13 - Exit']
 end
 
 def take_action(app)
