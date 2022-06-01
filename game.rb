@@ -14,7 +14,7 @@ class Game < Item
     last_played_date = Date.strptime(@last_played_at, '%d-%m-%Y')
     difference_in_years = (Time.now.year - last_played_date.year)
     return true if super && difference_in_years > 2
+
     false
   end
 end
-
