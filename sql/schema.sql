@@ -6,3 +6,12 @@ CREATE TABLE genre (
   PRIMARY KEY(id)
 )
 
+CREATE TABLE music_album (
+  id INT GENERATED ALWAYS AS IDENTITY
+  publish_date DATE
+  on_spotify BOOLEAN
+  archived BOOLEAN
+  genre_id INT references genre(id)
+  PRIMARY KEY(id)
+)
+
