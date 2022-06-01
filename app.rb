@@ -62,6 +62,10 @@ class App
     @music_album_list.each { |music_genre| puts "Date: #{music_genre.date}, On Spotify: #{music_genre.date}" }
   end
 
+  def display_games
+    @game.each {|game| puts "Date: #{game.date}, last played at #{game.last_played_at}" }
+  end  
+
   def recover_genre(hash)
     hash.each do |genre|
       current_genre = genre['value']
