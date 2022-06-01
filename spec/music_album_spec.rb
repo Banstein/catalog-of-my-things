@@ -3,10 +3,10 @@ require './item'
 
 describe MusicAlbum do
   before :each do
-    @music_album = MusicAlbum.new('22-02-2022', true)
+    @music_album = MusicAlbum.new('22-02-2022', false, true)
   end
 
-   context '#new' do
+  context '#new' do
     it 'should takes one parameters and returns a music album object' do
       expect(@music_album.instance_of?(MusicAlbum)) == true
     end

@@ -2,19 +2,18 @@ require './app'
 
 def display_app
   puts "\nPlease choose an option by entering a number:"
-  puts ['1 - List all books', '2 - List all music album', '3 - List all genre', '4 - List all labels', '5 - Add a book',
-<<<<<<< HEAD
-        '6 - Add a music album', '7 - Add genre', '8 - Add label', '9 - Exit']
-=======
-        '6 - Add a music album', '7 - Add genre', '8 - Add label', '9 - List all movies', '10 - List all Sources', '11 - Add a movie', '12 - Exit']
->>>>>>> 96c3afee59395cec939b58db50374a3cf40d8e94
+  puts ['1 - List all books', '2 - List all music album', '3 - List all genre',
+        '4 - List all labels', '5 - Add a book', '6 - Add a music album',
+        '7 - Add genre', '8 - Add label', '9 - List all movies',
+        '10 - List all Sources', '11 - Add a movie', '12 - Exit']
 end
 
 def take_action(app)
   decision = gets.chomp
-  puts 'Please choose one of the options on the list' unless '123456789'.include?(decision)
+  puts 'Please choose one of the options on the list' unless '123456789"10""11""12"'.include?(decision)
   decision == '9' && exit_program
-  methods = [method(:display_books), method(:display_music_album), method(:display_genre), method(:add_genre), method(:display_labels) method(:add_music_album), method(:add_genre), method(:add_label)]
+  methods = [method(:display_books), method(:display_music_album), method(:display_genre), method(:add_genre),
+             method(:display_labels), method(:add_music_album), method(:add_genre), method(:add_label)]
   '12345678'.include?(decision) && methods[decision.to_i - 1].call(app)
 end
 
@@ -36,7 +35,7 @@ end
 def on_spotify?(spotify_value)
   on_spotify = false
   spotify = spotify_value.capitalize
-  on_spotify = true if permission.include?('Y')
+  on_spotify = true if spotify.include?('Y')
   on_spotify
 end
 
@@ -58,7 +57,7 @@ end
 def main
   puts 'Welcome to your catalog of things!'
   app = App.new
- loop do
+  loop do
     display_app
     take_action(app)
   end
