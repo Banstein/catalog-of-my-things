@@ -92,6 +92,14 @@ class App
     @game.each { |game| puts "Date: #{game.publish_date}, last played at #{game.last_played_at}" }
   end
 
+  def display_label
+    @label.each { |label| puts "Title: #{label.title}, Color: #{label.color}" }
+  end
+
+  def display_book
+    @book.each { |book| puts "Publisher: #{book.publisher}, Cover state: #{book.cover_state}, Date: #{book.publish_date}" }
+  end
+
   def recover_genre(hash)
     hash.each do |genre|
       current_genre = genre['value']
