@@ -40,6 +40,8 @@ class App
     recover_music_list(music_album_file)
     recover_game(game_file)
     recover_author(author_file)
+    recover_label(label_file)
+    recover_book(book_file)
   end
 
   def to_hash(object)
@@ -101,7 +103,9 @@ class App
   end
 
   def display_book
-    @book.each { |book| puts "Publisher: #{book.publisher}, Cover state: #{book.cover_state}, Date: #{book.publish_date}" }
+    @book.each do |book|
+      puts "Publisher: #{book.publisher}, Cover state: #{book.cover_state}, Date: #{book.publish_date}"
+    end
   end
 
   def recover_genre(hash)
