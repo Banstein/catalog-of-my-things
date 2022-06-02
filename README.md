@@ -1,6 +1,6 @@
-# # Morse Code
+# # Catalog of My Things
 
-> This a Ruby project that translate morse code into English alphabet
+> This a Ruby project capstone project for educational purposes
 
 ## Built With
 
@@ -12,13 +12,12 @@
 
 Start by cloning the repository.
 
-`https://github.com/Banstein/decode-morse-message.git`
+`https://github.com/Banstein/catalog-of-my-things`
 
 Navigate to the created folder.
 
-`cd decode-morse-message`
+`cd catalog-of-my-things`
 
-Have fun with morse code translation.
 
 ## Authors
 
@@ -28,11 +27,11 @@ Have fun with morse code translation.
 - Twitter: [@islam_bahnas](https://twitter.com/islam_bahnas)
 - LinkedIn: [islam-bahnas](www.linkedin.com/in/islam-bahnas)
 
-👤 Faith Eloho Usor
+👤 Bonke Gcobo
 
-- GitHub: [@githubhandle](https://github.com/usorfaitheloho)
-- Twitter: [@twitterhandle](https://twitter.com/faith-usor16)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/faith-usor)
+- GitHub: [@githubhandle](https://github.com/bonkegcobo)
+- Twitter: [@twitterhandle](https://twitter.com/bonkegcobo)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/bonkegcobo)
 
 ## 🤝 Contributing
 
