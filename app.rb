@@ -7,7 +7,7 @@ require_relative './label'
 require_relative './book'
 
 class App
-  attr_reader :genre_list, :music_album_list, :game, :author, :
+  attr_reader :genre_list, :music_album_list, :game, :authors
 
   def initialize
     @genre_list = []
@@ -90,6 +90,10 @@ class App
 
   def display_games
     @game.each { |game| puts "Date: #{game.publish_date}, last played at #{game.last_played_at}" }
+  end
+
+  def display_author
+    @authors.each { |author| puts "Author Name: #{author.first_name} #{author.last_name}" }
   end
 
   def display_label
