@@ -29,7 +29,7 @@ class App
     genre_file = get_file('./data/genre_list.json')
     music_album_file = get_file('./data/music_album_list.json')
     game_file = get_file('./data/game.json')
-    author_file = get_file('./data/author.json')
+    author_file = get_file('./data/authors.json')
     recover_genre(genre_file)
     recover_music_list(music_album_file)
     recover_game(game_file)
