@@ -32,7 +32,7 @@ describe Label do
     expect(book.label).to eq @label
   end
 
-  context 'Genre to return list of items' do
+  context 'Label to return list of items' do
     it 'Items should return array of length one(1)' do
       item = Item.new('2022-04-04')
       @label.add_item(item)
