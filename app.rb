@@ -137,4 +137,23 @@ class App
       add_author(first_name, last_name)
     end
   end
+
+  def recover_label(hash)
+    hash.each do |label|
+      current_label = label['value']
+      title = current_label['title']
+      color = current_label['color']
+      add_label(title, color)
+    end
+  end
+
+  def recover_book(hash)
+    hash.each do |book|
+      current_book = book['value']
+      publisher = current_book['title']
+      cover_state = current_book['cover_state']
+      publish_date = current_book['publish_date']
+      add_book(publisher, cover_state, publish_date)
+    end
+  end
 end
