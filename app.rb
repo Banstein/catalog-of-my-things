@@ -7,7 +7,7 @@ require_relative './label'
 require_relative './book'
 
 class App
-  attr_reader :genre_list, :music_album_list, :game, :authors
+  attr_reader :genre_list, :music_album_list, :game, :authors, :book, :label
 
   def initialize
     @genre_list = []
