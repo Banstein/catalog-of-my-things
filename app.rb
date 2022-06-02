@@ -44,8 +44,8 @@ class App
     hash
   end
 
-  def add_author(_first_name, _last_name)
-    author = Author.new(date, archived)
+  def add_author(first_name, last_name)
+    author = Author.new(first_name, last_name)
     authors.push(author)
   end
 
