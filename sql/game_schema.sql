@@ -3,5 +3,6 @@ CREATE TABLE game (
   publish_date DATE,
   archived BOOLEAN,
   multiplayer BOOLEAN,
-  last_played_at DATE
+  last_played_at DATE,
+  PRIMARY KEY(id)
 );
