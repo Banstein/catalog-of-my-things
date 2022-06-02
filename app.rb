@@ -77,7 +77,7 @@ class App
   end
 
   def display_author
-    @authors. each { |author| puts "Author Name: #{author.first_name} #{author.last_name}" }
+    @authors.each { |author| puts "Author Name: #{author.first_name} #{author.last_name}" }
   end
 
   def recover_genre(hash)
