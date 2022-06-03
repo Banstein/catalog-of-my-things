@@ -7,15 +7,15 @@ require_relative './label'
 require_relative './book'
 
 class App
-  attr_reader :genre_list, :music_album_list, :game, :authors, :book, :label
+  attr_reader :genre_list, :music_album_list, :game, :authors, :books, :labels
 
   def initialize
     @genre_list = []
     @music_album_list = []
     @game = []
     @authors = []
-    @label = []
-    @book = []
+    @labels = []
+    @books = []
   end
 
   def save_files
@@ -34,8 +34,8 @@ class App
     music_album_file = get_file('./data/music_album_list.json')
     game_file = get_file('./data/game.json')
     author_file = get_file('./data/authors.json')
-    label_file = get_file('./data/label.json')
-    book_file = get_file('./data/book.json')
+    label_file = get_file('./data/labels.json')
+    book_file = get_file('./data/books.json')
     recover_genre(genre_file)
     recover_music_list(music_album_file)
     recover_game(game_file)
@@ -74,12 +74,12 @@ class App
 
   def add_label(title, color)
     label = Label.new(title, color)
-    label.push(label)
+    labels.push(label)
   end
 
   def add_book(publisher, cover_state, publish_date)
     book = Book.new(publisher, cover_state, publish_date)
-    book.push(book)
+    books.push(book)
   end
 
   def display_genre
@@ -98,12 +98,12 @@ class App
     @authors.each { |author| puts "Author Name: #{author.first_name} #{author.last_name}" }
   end
 
-  def display_label
-    @label.each { |label| puts "Title: #{label.title}, Color: #{label.color}" }
+  def display_labels
+    @labels.each { |label| puts "Title: #{label.title}, Color: #{label.color}" }
   end
 
-  def display_book
-    @book.each do |book|
+  def display_books
+    @books.each do |book|
       puts "Publisher: #{book.publisher}, Cover state: #{book.cover_state}, Date: #{book.publish_date}"
     end
   end

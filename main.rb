@@ -2,33 +2,54 @@ require './app'
 
 def display_app
   puts "\nPlease choose an option by entering a number:"
-  puts ['1 - List all books', '2 - List all music album', '3 - List all genre',
-        '4 - List all labels', '5 - List all games', '6 - List all authors',
-        '7 - Add genre', '8 - Add label', '9 - Add a book',
-        '10 - Add a music album', '11 - Add a game', '12 - Add author', '13 - Exit']
+  puts [
+    '1 - List all books',
+    '2 - List all music album',
+    '3 - List all genre',
+    '4 - List all labels',
+    '5 - List all games',
+    '6 - List all authors',
+    '7 - Add genre',
+    '8 - Add label',
+    '9 - Add a book',
+    '10 - Add a music album',
+    '11 - Add a game',
+    '12 - Add author',
+    '13 - Exit'
+    ]
 end
 
 def take_action(app)
   decision = gets.chomp
   puts 'Please choose one of the options on the list' unless '123456789"10""11""12"'.include?(decision)
   decision == '13' && exit_program
-  methods = [method(:display_books), method(:display_music_album), method(:display_genre),
-             method(:display_labels), method(:display_games), method(:display_authors),
-             method(:add_genre), method(:add_label), method(:add_book),
-             method(:add_music_album), method(:add_game), method(:add_author)]
+  methods = [
+    method(:display_books),
+    method(:display_music_album),
+    method(:display_genre),
+    method(:display_labels),
+    method(:display_games),
+    method(:display_authors),
+    method(:add_genre),
+    method(:add_label),
+    method(:add_book),
+    method(:add_music_album),
+    method(:add_game),
+    method(:add_author)
+  ]
   '123456789"10""11"'.include?(decision) && methods[decision.to_i - 1].call(app)
 end
 
-def display_books(_app)
-  puts app.display_books
+def display_books(app)
+  app.display_books
 end
 
-def display_labels(_app)
-  puts app.display_label
+def display_labels(app)
+  app.display_labels
 end
 
 def display_games(app)
-  puts app.display_games
+  app.display_games
 end
 
 def display_authors(app)
