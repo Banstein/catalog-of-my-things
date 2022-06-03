@@ -59,7 +59,18 @@ def add_book(app)
 end
 
 def add_game(app)
-  puts 'Still to add game method'
+  puts 'Enter published date [day-month-Year]'
+  date = gets.chomp
+  puts "Is the game archived [y/n]"
+  archived = gets.chomp.downcase
+  archived == "n" ? arch_bool= true : arch_bool =false
+  puts "Is the game multiply [y/n]"
+  multiplayer = gets.chomp.downcase
+  multiplayer == "n" ? mult_bool= true : mult_bool =false
+  puts "Enter last played at data [day-month-Year]"
+  last_played = gets.chomp
+  app.add_game(date, arch_bool, mult_bool, last_played)
+  app.save_files
 end
 
 def add_author(app)
