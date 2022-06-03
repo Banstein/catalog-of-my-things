@@ -16,7 +16,7 @@ def display_app
     '11 - Add a game',
     '12 - Add author',
     '13 - Exit'
-    ]
+  ]
 end
 
 def take_action(app)
