@@ -1,4 +1,5 @@
-# # Catalog of My Things
+![](https://img.shields.io/badge/Microverse-blueviolet)
+# Catalog of My Things
 
 > This a Ruby project capstone project for educational purposes
 
@@ -10,6 +11,8 @@
 
 ## Getting Started
 
+To get a local copy up and running follow these simple example steps.
+
 Start by cloning the repository.
 
 `https://github.com/Banstein/catalog-of-my-things`
@@ -18,6 +21,10 @@ Navigate to the created folder.
 
 `cd catalog-of-my-things`
 
+### Prerequisites
+
+- A Command Line Interface.
+- Having Ruby installed.
 
 ## Authors
 
@@ -27,12 +34,15 @@ Navigate to the created folder.
 - Twitter: [@islam_bahnas](https://twitter.com/islam_bahnas)
 - LinkedIn: [islam-bahnas](www.linkedin.com/in/islam-bahnas)
 
+👤 **Okoroji Victor aka Vickymarz**
 👤 Bonke Gcobo
 
 - GitHub: [@githubhandle](https://github.com/bonkegcobo)
 - Twitter: [@twitterhandle](https://twitter.com/bonkegcobo)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/bonkegcobo)
 
+- GitHub: [@githubhandle](https://github.com/vickymarz)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/okoroji-victor-ebube-8791741a0)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
