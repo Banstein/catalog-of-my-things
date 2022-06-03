@@ -28,11 +28,11 @@ def display_labels(app)
 end
 
 def display_games(app)
-  "games"
+  puts app.display_games
 end
 
 def display_authors(app)
-  "authors"
+  app.display_authors
 end
 
 def display_genre(app)
@@ -71,10 +71,17 @@ def add_game(app)
   last_played = gets.chomp
   app.add_game(date, arch_bool, mult_bool, last_played)
   app.save_files
+  puts "Game added successfully"
 end
 
 def add_author(app)
-  puts 'Still to add author method'
+  puts "Enter author first name"
+  first_name = gets.chomp
+  puts "Enter author last name"
+  last_name = gets.chomp
+  app.add_author(first_name, last_name)
+  app.save_files
+  puts "Author is added successfully"
 end
 
 def on_spotify?(spotify_value)
@@ -94,6 +101,10 @@ def add_music_album(app)
   puts 'Music album added successfully'
 end
 
+def recover_files(app)
+  app.recover_files
+end
+
 def exit_program
   puts 'Thank you for using this app!'
   exit
@@ -102,6 +113,7 @@ end
 def main
   puts 'Welcome to your catalog of things!'
   app = App.new
+  recover_files(app)
   loop do
     display_app
     take_action(app)

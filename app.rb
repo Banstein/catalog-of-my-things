@@ -94,7 +94,7 @@ class App
     @game.each { |game| puts "Date: #{game.publish_date}, last played at #{game.last_played_at}" }
   end
 
-  def display_author
+  def display_authors
     @authors.each { |author| puts "Author Name: #{author.first_name} #{author.last_name}" }
   end
 
@@ -165,3 +165,6 @@ class App
     end
   end
 end
+
+app = App.new
+puts app.display_authors
