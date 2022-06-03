@@ -23,10 +23,11 @@ def take_action(app)
   decision = gets.chomp
   puts 'Please choose one of the options on the list' unless '123456789"10""11""12""13"'.include?(decision)
   decision == '13' && exit_program
-   if decision==""
-      puts "Please choose from the given options"
-      main
-   end
+  if decision == ''
+    puts 'Please choose from the given options'
+    main
+  end
+
   methods = [
     method(:display_books),
     method(:display_music_album),
@@ -34,12 +35,8 @@ def take_action(app)
     method(:display_labels),
     method(:display_games),
     method(:display_authors),
-    method(:add_genre),
-    method(:add_label),
-    method(:add_book),
-    method(:add_music_album),
-    method(:add_game),
-    method(:add_author)
+    method(:add_genre), method(:add_label), method(:add_book),
+    method(:add_music_album), method(:add_game), method(:add_author)
   ]
   "123456789'10''11''12'".include?(decision) && methods[decision.to_i - 1].call(app)
 end

@@ -87,7 +87,9 @@ class App
   end
 
   def display_music_album
-    @music_album_list.each { |music_genre| puts "Date: #{music_genre.publish_date}, On Spotify: #{music_genre.on_spotify}" }
+    @music_album_list.each do |music_genre|
+      puts "Date: #{music_genre.publish_date}, On Spotify: #{music_genre.on_spotify}"
+    end
   end
 
   def display_games
@@ -121,7 +123,7 @@ class App
       current_album = music_album['value']
       date = current_album['publish_date']
       on_spotify = current_album['on_spotify']
-      add_music_album(date,on_spotify)
+      add_music_album(date, on_spotify)
     end
   end
 
