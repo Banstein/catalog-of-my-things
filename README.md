@@ -25,6 +25,10 @@ Navigate to the created folder.
 - A Command Line Interface.
 - Having Ruby installed.
 
+### Usage
+
+- Run `ruby ./main.rb` to start the console app
+
 ## Authors
 
 👤 Islam Bahnas
