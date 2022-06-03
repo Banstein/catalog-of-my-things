@@ -34,12 +34,13 @@ Navigate to the created folder.
 - Twitter: [@islam_bahnas](https://twitter.com/islam_bahnas)
 - LinkedIn: [islam-bahnas](www.linkedin.com/in/islam-bahnas)
 
-👤 **Okoroji Victor aka Vickymarz**
 👤 Bonke Gcobo
 
 - GitHub: [@githubhandle](https://github.com/bonkegcobo)
 - Twitter: [@twitterhandle](https://twitter.com/bonkegcobo)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/bonkegcobo)
+
+👤 **Okoroji Victor aka Vickymarz**
 
 - GitHub: [@githubhandle](https://github.com/vickymarz)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/okoroji-victor-ebube-8791741a0)
