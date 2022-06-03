@@ -37,7 +37,7 @@ def take_action(app)
     method(:add_game),
     method(:add_author)
   ]
-  '123456789"10""11"'.include?(decision) && methods[decision.to_i - 1].call(app)
+  '123456789"10""11""12"'.include?(decision) && methods[decision.to_i - 1].call(app)
 end
 
 def display_books(app)
