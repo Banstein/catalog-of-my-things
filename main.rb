@@ -5,18 +5,18 @@ def display_app
   puts ['1 - List all books', '2 - List all music album', '3 - List all genre',
         '4 - List all labels', '5 - List all games', '6 - List all authors',
         '7 - Add genre', '8 - Add label', '9 - Add a book',
-        '10 - Add a music album', '11 - Add a game', '12 - Exit']
+        '10 - Add a music album', '11 - Add a game','12 - Add author', '13 - Exit']
 end
 
 def take_action(app)
   decision = gets.chomp
   puts 'Please choose one of the options on the list' unless '123456789"10""11""12"'.include?(decision)
-  decision == '12' && exit_program
+  decision == '13' && exit_program
   methods = [method(:display_books), method(:display_music_album), method(:display_genre),
              method(:display_labels), method(:display_games), method(:display_authors),
              method(:add_genre), method(:add_label), method(:add_book),
-             method(:add_music_album), method(:add_game)]
-  '12345678'.include?(decision) && methods[decision.to_i - 1].call(app)
+             method(:add_music_album), method(:add_game), method(:add_author)]
+  '123456789"10""11"'.include?(decision) && methods[decision.to_i - 1].call(app)
 end
 
 def display_books(app)
@@ -60,6 +60,10 @@ end
 
 def add_game(app)
   puts 'Still to add game method'
+end
+
+def add_author(app)
+  puts 'Still to add author method'
 end
 
 def on_spotify?(spotify_value)
