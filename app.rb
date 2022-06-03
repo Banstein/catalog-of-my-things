@@ -87,7 +87,7 @@ class App
   end
 
   def display_music_album
-    @music_album_list.each { |music_genre| puts "Date: #{music_genre.date}, On Spotify: #{music_genre.date}" }
+    @music_album_list.each { |music_genre| puts "Date: #{music_genre.publish_date}, On Spotify: #{music_genre.on_spotify}" }
   end
 
   def display_games
@@ -119,10 +119,9 @@ class App
   def recover_music_list(hash)
     hash.each do |music_album|
       current_album = music_album['value']
-      date = current_album['date']
-      archived = current_album['archived']
+      date = current_album['publish_date']
       on_spotify = current_album['on_spotify']
-      add_book(date, archived, on_spotify)
+      add_music_album(date,on_spotify)
     end
   end
 

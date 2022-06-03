@@ -21,8 +21,12 @@ end
 
 def take_action(app)
   decision = gets.chomp
-  puts 'Please choose one of the options on the list' unless '123456789"10""11""12"'.include?(decision)
+  puts 'Please choose one of the options on the list' unless '123456789"10""11""12""13"'.include?(decision)
   decision == '13' && exit_program
+   if decision==""
+      puts "Please choose from the given options"
+      main
+   end
   methods = [
     method(:display_books),
     method(:display_music_album),
@@ -37,7 +41,7 @@ def take_action(app)
     method(:add_game),
     method(:add_author)
   ]
-  '123456789"10""11""12"'.include?(decision) && methods[decision.to_i - 1].call(app)
+  "123456789'10''11''12'".include?(decision) && methods[decision.to_i - 1].call(app)
 end
 
 def display_books(app)
@@ -134,6 +138,7 @@ def add_music_album(app)
   spotify_value = gets.chomp
   spotify = on_spotify?(spotify_value)
   app.add_music_album(date, spotify)
+  app.save_files
   puts 'Music album added successfully'
 end
 
