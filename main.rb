@@ -20,11 +20,11 @@ def take_action(app)
 end
 
 def display_books(_app)
-  'Books'
+  puts app.display_books
 end
 
 def display_labels(_app)
-  'labels'
+  puts app.display_label
 end
 
 def display_games(app)
@@ -47,15 +47,30 @@ def add_genre(app)
   print "\nName of Genre: "
   name = gets.chomp
   app.add_genre(name)
+  app.save_files
   puts 'Genre added successfully'
 end
 
-def add_label(_app)
-  puts 'Still to add label method'
+def add_label(app)
+  puts 'Enter the title'
+  title = gets.chomp
+  puts 'Enter the color'
+  color = gets.chomp
+  app.add_label(title, color)
+  app.save_files
+  puts 'Label added successfully'
 end
 
-def add_book(_app)
-  puts 'Still to add book method'
+def add_book(app)
+  puts 'Enter the published date [day-month-Year]'
+  publish_date = gets.chomp
+  puts 'Enter the cover state [good/bad]'
+  cover_state = gets.chomp
+  puts 'Enter the puplisher'
+  publisher = gets.chomp
+  app.add_book(publisher, cover_state, publish_date)
+  app.save_files
+  puts 'Book added successfully'
 end
 
 def add_game(app)
