@@ -3,7 +3,7 @@ require './item'
 
 describe MusicAlbum do
   before :each do
-    @music_album = MusicAlbum.new('22-02-2022', false, true)
+    @music_album = MusicAlbum.new('22-02-2010', true)
   end
 
   context '#new' do
@@ -13,8 +13,8 @@ describe MusicAlbum do
   end
 
   context 'method test' do
-    it 'can_be_archieved should return false' do
-      expect(@music_album.can_be_archived?).to be false
+    it 'can_be_archieved should return true' do
+      expect(@music_album.can_be_archived?).to be true
     end
   end
 end
