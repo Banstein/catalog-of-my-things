@@ -6,8 +6,7 @@
 ## Built With
 
 - RUBY
-- TERMINAL
-- IRB
+- Postgresql
 
 ## Getting Started
 
