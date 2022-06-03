@@ -28,12 +28,10 @@ Have fun with morse code translation.
 - Twitter: [@islam_bahnas](https://twitter.com/islam_bahnas)
 - LinkedIn: [islam-bahnas](www.linkedin.com/in/islam-bahnas)
 
-👤 Faith Eloho Usor
+👤 **Okoroji Victor aka Vickymarz**
 
-- GitHub: [@githubhandle](https://github.com/usorfaitheloho)
-- Twitter: [@twitterhandle](https://twitter.com/faith-usor16)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/faith-usor)
-
+- GitHub: [@githubhandle](https://github.com/vickymarz)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/okoroji-victor-ebube-8791741a0)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
