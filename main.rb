@@ -5,7 +5,7 @@ def display_app
   puts ['1 - List all books', '2 - List all music album', '3 - List all genre',
         '4 - List all labels', '5 - List all games', '6 - List all authors',
         '7 - Add genre', '8 - Add label', '9 - Add a book',
-        '10 - Add a music album', '11 - Add a game','12 - Add author', '13 - Exit']
+        '10 - Add a music album', '11 - Add a game', '12 - Add author', '13 - Exit']
 end
 
 def take_action(app)
@@ -19,12 +19,12 @@ def take_action(app)
   '123456789"10""11"'.include?(decision) && methods[decision.to_i - 1].call(app)
 end
 
-def display_books(app)
-  "Books"
+def display_books(_app)
+  'Books'
 end
 
-def display_labels(app)
-  "labels"
+def display_labels(_app)
+  'labels'
 end
 
 def display_games(app)
@@ -50,38 +50,38 @@ def add_genre(app)
   puts 'Genre added successfully'
 end
 
-def add_label(app)
+def add_label(_app)
   puts 'Still to add label method'
 end
 
-def add_book(app)
+def add_book(_app)
   puts 'Still to add book method'
 end
 
 def add_game(app)
   puts 'Enter published date [day-month-Year]'
   date = gets.chomp
-  puts "Is the game archived [y/n]"
+  puts 'Is the game archived [y/n]'
   archived = gets.chomp.downcase
-  archived == "n" ? arch_bool= true : arch_bool =false
-  puts "Is the game multiply [y/n]"
+  arch_bool = archived == 'n'
+  puts 'Is the game multiply [y/n]'
   multiplayer = gets.chomp.downcase
-  multiplayer == "n" ? mult_bool= true : mult_bool =false
-  puts "Enter last played at data [day-month-Year]"
+  mult_bool = multiplayer == 'n'
+  puts 'Enter last played at data [day-month-Year]'
   last_played = gets.chomp
   app.add_game(date, arch_bool, mult_bool, last_played)
   app.save_files
-  puts "Game added successfully"
+  puts 'Game added successfully'
 end
 
 def add_author(app)
-  puts "Enter author first name"
+  puts 'Enter author first name'
   first_name = gets.chomp
-  puts "Enter author last name"
+  puts 'Enter author last name'
   last_name = gets.chomp
   app.add_author(first_name, last_name)
   app.save_files
-  puts "Author is added successfully"
+  puts 'Author is added successfully'
 end
 
 def on_spotify?(spotify_value)
