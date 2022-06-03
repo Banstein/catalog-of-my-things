@@ -1,7 +1,9 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Catalog of My Things
 
-> This a Ruby project capstone project for educational purposes
+> This a Ruby project capstone project for educational purposes, In this project, we created a console app that will help users to keep a record of different types of things based on a UML class diagram above, The data is be stored in JSON files but we also added a schema for the database with tables structure analogical to the program's class structure.
+
+## Live Video
 
 ## Built With
 
