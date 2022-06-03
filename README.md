@@ -1,4 +1,5 @@
-# # Catalog of My Things
+![](https://img.shields.io/badge/Microverse-blueviolet)
+# Catalog of My Things
 
 > This a Ruby project capstone project for educational purposes
 
@@ -10,6 +11,8 @@
 
 ## Getting Started
 
+To get a local copy up and running follow these simple example steps.
+
 Start by cloning the repository.
 
 `https://github.com/Banstein/catalog-of-my-things`
@@ -18,6 +21,10 @@ Navigate to the created folder.
 
 `cd catalog-of-my-things`
 
+### Prerequisites
+
+- A Command Line Interface.
+- Having Ruby installed.
 
 ## Authors
 
