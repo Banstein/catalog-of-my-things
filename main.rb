@@ -19,6 +19,22 @@ def take_action(app)
   '12345678'.include?(decision) && methods[decision.to_i - 1].call(app)
 end
 
+def display_books(app)
+  "Books"
+end
+
+def display_labels(app)
+  "labels"
+end
+
+def display_games(app)
+  "games"
+end
+
+def display_authors(app)
+  "authors"
+end
+
 def display_genre(app)
   app.display_genre
 end
@@ -32,6 +48,18 @@ def add_genre(app)
   name = gets.chomp
   app.add_genre(name)
   puts 'Genre added successfully'
+end
+
+def add_label(app)
+  puts 'Still to add label method'
+end
+
+def add_book(app)
+  puts 'Still to add book method'
+end
+
+def add_game(app)
+  puts 'Still to add game method'
 end
 
 def on_spotify?(spotify_value)
