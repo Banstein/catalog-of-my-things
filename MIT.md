@@ -1,6 +1,8 @@
 MIT License
 
 Copyright (c) 2022 Islam Bahnas
+Copyright (c) 2022 Bonke Gcobo
+Copyright (c) 2022 Okoroji Victor aka Vickymarz
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
